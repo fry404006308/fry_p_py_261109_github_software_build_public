@@ -1,0 +1,5 @@
+_ci_out/
+_ci_all/
+__pycache__/
+*.pyc
+versions/*/*/release_download/

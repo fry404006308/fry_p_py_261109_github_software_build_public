@@ -1,0 +1,23 @@
+{
+ "schema_str": "fry-gh-history/2",
+ "software_str": "hello_app",
+ "versions_list": [
+  {
+   "dir_str": "_261109_0724_v0.1.0_app",
+   "version_str": "0.1.0",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64",
+    "linux-x64",
+    "win32-x64"
+   ],
+   "inputs_sha256_dict": {
+    "win32-x64": "797e8aefe14a28b2e56d8f304a7372c92d66ec8a4c331e50b1a03d7b9ab08eb2",
+    "darwin-arm64": "02372d71794a16428a34d8dd7696ce07a0e9bfa1b2bf53d7db6be49687504b4d",
+    "darwin-x64": "c4d9d14e13b21e588207d2ce9aa5533218515bea10ebcfe54b3d4fe3ab01e113",
+    "linux-x64": "a731bf52b4559017a5edc367911b27a62a32f323af21fb45587805851e2ec4d7"
+   }
+  }
+ ]
+}
