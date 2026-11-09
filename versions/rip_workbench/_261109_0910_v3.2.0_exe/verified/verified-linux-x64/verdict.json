@@ -1,0 +1,69 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "范仁义3D彩色打印RIP工作台",
+ "version_str": "3.2.0",
+ "version_dir_str": "_261109_0910_v3.2.0_exe",
+ "target_str": "linux-x64",
+ "host_target_str": "linux-x64",
+ "machine_dict": {
+  "platform_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+  "machine_str": "x86_64",
+  "python_str": "3.11.18",
+  "image_str": "ubuntu22 20261101.347.1",
+  "libc_str": "glibc 2.35"
+ },
+ "started_at_str": "2026-11-09T17:13:26+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 linux-x64 ｜ 要验 linux-x64"
+  },
+  {
+   "key_str": "大文件下载",
+   "ok_bool": true,
+   "detail_str": "linux-x64__范仁义3D彩色打印RIP工作台_v3.2.0 ← release transport-rip_workbench-261109_0910_v3.2.0_exe"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/linux-x64__范仁义3D彩色打印RIP工作台_v3.2.0"
+  },
+  {
+   "key_str": "apt 装 Qt 需要的系统库",
+   "ok_bool": true,
+   "detail_str": "rc=0 23.4 s"
+  },
+  {
+   "key_str": "gui_check",
+   "ok_bool": true,
+   "detail_str": "rc=0 11.4 s"
+  },
+  {
+   "key_str": "作业单_HS200",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.0 s"
+  },
+  {
+   "key_str": "真作业_HS200_dll加网",
+   "ok_bool": true,
+   "detail_str": "rc=0 22.6 s"
+  },
+  {
+   "key_str": "作业单_HR200",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.0 s"
+  },
+  {
+   "key_str": "真作业_HR200_仿真",
+   "ok_bool": true,
+   "detail_str": "rc=0 17.6 s"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 85.1,
+ "deliverable_dict": {
+  "linux-x64__范仁义3D彩色打印RIP工作台_v3.2.0": "e3ba78d09ecc63d4fbb26b449a218d93168682843949120c2b2c7ce8f7dae6e1"
+ }
+}

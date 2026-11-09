@@ -1,0 +1,61 @@
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64/范仁义3D彩色打印RIP工作台.app/Contents/MacOS/范仁义3D彩色打印RIP工作台 --gui-check /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/gui
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+Matplotlib is building the font cache; this may take a moment.
+qt.qpa.fonts: Populating font family aliases took 115 ms. Replace uses of missing font family "Sans Serif" with one that exists to avoid this cost. 
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support grabbing the keyboard
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+
+[rc=0, 35.0 s]
+
+$ /Library/Frameworks/Python.framework/Versions/3.11/bin/python -c import json,sys;json.dump(dict(feature=sys.argv[1],input=sys.argv[2],output=sys.argv[3],run=True,params=json.loads(sys.argv[5])),open(sys.argv[4],'w',encoding='utf-8')) HS200_halftone_dll /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/versions/rip_workbench/_261109_0910_v3.2.0_exe/assets/in /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/out_dll /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/job_dll.json {"sdk_check_str": "warn"}
+
+[rc=0, 0.1 s]
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64/范仁义3D彩色打印RIP工作台.app/Contents/MacOS/范仁义3D彩色打印RIP工作台 --gui-check /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/gui_dll /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/job_dll.json
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+qt.qpa.fonts: Populating font family aliases took 101 ms. Replace uses of missing font family "Sans Serif" with one that exists to avoid this cost. 
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support grabbing the keyboard
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+
+[rc=0, 36.5 s]
+
+$ /Library/Frameworks/Python.framework/Versions/3.11/bin/python -c import json,sys;json.dump(dict(feature=sys.argv[1],input=sys.argv[2],output=sys.argv[3],run=True,params=json.loads(sys.argv[5])),open(sys.argv[4],'w',encoding='utf-8')) HR200_simulate_bmp /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/out_dll /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/out_sim /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/job_sim.json {}
+
+[rc=0, 0.1 s]
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64/范仁义3D彩色打印RIP工作台.app/Contents/MacOS/范仁义3D彩色打印RIP工作台 --gui-check /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/gui_sim /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/job_sim.json
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+qt.qpa.fonts: Populating font family aliases took 126 ms. Replace uses of missing font family "Sans Serif" with one that exists to avoid this cost. 
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support grabbing the keyboard
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+
+[rc=0, 20.5 s]

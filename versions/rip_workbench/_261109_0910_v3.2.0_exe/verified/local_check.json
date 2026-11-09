@@ -1,0 +1,35 @@
+{
+ "ok_bool": false,
+ "problems_list": [
+  "darwin-x64 没过：['真作业_HS200_dll加网', '真作业_HR200_仿真']",
+  "win32-x64 没有 verdict",
+  "CI 汇总没过或没下载到"
+ ],
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "darwin-arm64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64.zip": "20605a9d29a551a3ec1e554f6df454f5d63087462f9fb8552ea0dc149f9b5401"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": false,
+   "checks_int": 8,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {}
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 9,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "linux-x64__范仁义3D彩色打印RIP工作台_v3.2.0": "e3ba78d09ecc63d4fbb26b449a218d93168682843949120c2b2c7ce8f7dae6e1"
+   }
+  }
+ ]
+}
