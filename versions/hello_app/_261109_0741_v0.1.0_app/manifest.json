@@ -1,0 +1,110 @@
+{
+ "schema_str": "fry-gh-version/2",
+ "software_str": "HelloApp",
+ "slug_str": "hello_app",
+ "version_str": "0.1.0",
+ "dir_str": "_261109_0741_v0.1.0_app",
+ "created_at_str": "2026-11-09T07:41:38-0800",
+ "targets": {
+  "win32-x64": {
+   "input": "inputs/win32-x64__HelloApp_v0.1.0.exe",
+   "sha256_str": "797e8aefe14a28b2e56d8f304a7372c92d66ec8a4c331e50b1a03d7b9ab08eb2",
+   "size_int": 6713424,
+   "kind": "app",
+   "exe": "HelloApp_v0.1.0.exe",
+   "steps": [
+    {
+     "name": "selftest",
+     "cmd": [
+      "{exe}",
+      "--selftest",
+      "{out}/out"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 120,
+     "env": {},
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/out/result.json"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "darwin-arm64": {
+   "input": "inputs/darwin-arm64__HelloApp_v0.1.0_darwin-arm64.zip",
+   "sha256_str": "02372d71794a16428a34d8dd7696ce07a0e9bfa1b2bf53d7db6be49687504b4d",
+   "size_int": 25555907,
+   "kind": "app",
+   "exe": "HelloApp.app/Contents/MacOS/HelloApp",
+   "steps": [
+    {
+     "name": "selftest",
+     "cmd": [
+      "{exe}",
+      "--selftest",
+      "{out}/out"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 120,
+     "env": {},
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/out/result.json"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "darwin-x64": {
+   "input": "inputs/darwin-x64__HelloApp_v0.1.0_darwin-x64.zip",
+   "sha256_str": "c4d9d14e13b21e588207d2ce9aa5533218515bea10ebcfe54b3d4fe3ab01e113",
+   "size_int": 25332666,
+   "kind": "app",
+   "exe": "HelloApp.app/Contents/MacOS/HelloApp",
+   "steps": [
+    {
+     "name": "selftest",
+     "cmd": [
+      "{exe}",
+      "--selftest",
+      "{out}/out"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 120,
+     "env": {},
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/out/result.json"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "linux-x64": {
+   "input": "inputs/linux-x64__HelloApp_v0.1.0_linux-x64.tar.gz",
+   "sha256_str": "a731bf52b4559017a5edc367911b27a62a32f323af21fb45587805851e2ec4d7",
+   "size_int": 33448215,
+   "kind": "app",
+   "exe": "HelloApp",
+   "steps": [
+    {
+     "name": "selftest",
+     "cmd": [
+      "{exe}",
+      "--selftest",
+      "{out}/out"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 120,
+     "env": {},
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/out/result.json"
+     ]
+    }
+   ],
+   "deliverables": []
+  }
+ }
+}

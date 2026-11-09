@@ -1,0 +1,4 @@
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\HelloApp_v0.1.0.exe --selftest D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/out
+FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+[rc=-8, 0.0 s]

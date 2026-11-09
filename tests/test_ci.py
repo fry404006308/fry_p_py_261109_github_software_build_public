@@ -75,3 +75,16 @@ def test_no_source_in_repo():
     bad = [p for p in REPO.rglob("*") if p.is_file() and p.suffix in (".py", ".c", ".cc", ".cpp", ".h", ".hpp")
            and p.relative_to(REPO).parts[0] not in ("ci", "tests", ".git")]
     assert bad == []
+
+
+def test_single_exe_input_keeps_original_name(tmp_path):
+    vdir = tmp_path / "versions" / "demo" / "_e"
+    (vdir / "inputs").mkdir(parents=True)
+    exe = vdir / "inputs" / ("%s__tool.py" % HOST)                                  # 用 .py 冒充单文件可执行
+    exe.write_text("import sys;open(sys.argv[1],'w').write('ok')\n", encoding="utf-8")
+    man = {"software_str": "demo", "version_str": "1", "targets": {HOST: {"input": "inputs/" + exe.name, "exe": "tool.py",
+           "steps": [{"name": "run", "cmd": ["{python}", "{exe}", "{out}/r.txt"], "expect_files": ["{out}/r.txt"]}]}}}
+    (vdir / "manifest.json").write_text(json.dumps(man), encoding="utf-8")
+    rc, v = run(vdir, tmp_path)
+    assert rc == 0 and v["ok_bool"]
+    assert not (tmp_path / "out" / "run" / "pkg").exists() and (tmp_path / "out" / "run" / "out" / "r.txt").is_file()

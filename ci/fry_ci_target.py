@@ -91,8 +91,8 @@ def extract(archive: Path, dst: Path) -> Path:
                 t.extractall(dst, filter="tar")
             else:
                 t.extractall(dst)
-    else:
-        shutil.copy2(archive, dst / archive.name)
+    else:                                                 # 单个可执行文件：去掉 inputs/ 里的「<平台>__」前缀，恢复成品原名
+        shutil.copy2(archive, dst / archive.name.split("__", 1)[-1])
         return dst
     kids = [p for p in dst.iterdir()]
     return kids[0] if len(kids) == 1 and kids[0].is_dir() else dst
@@ -158,6 +158,9 @@ def main(argv=None) -> int:
     checks = verdict["checks_list"]
 
     def finish(ok: bool, code: int) -> int:
+        # 解包目录不进 artifact：几万个文件、大小写同名（terminfo）、超长路径，Windows 上下载解压会失败；
+        # 输入包本身已在 deliverable/，软件跑出来的结果（run/out，截图 / json）留着当证据
+        shutil.rmtree(out / "run" / "pkg", ignore_errors=True)
         verdict["ok_bool"] = ok
         verdict["seconds_float"] = round(time.time() - t0, 1)
         verdict["deliverable_dict"] = {p.name: sha256_file(p) for p in sorted((out / "deliverable").iterdir()) if p.is_file()}
@@ -184,7 +187,7 @@ def main(argv=None) -> int:
     root = extract(inp, out / "run" / "pkg")
     exe = row.get("exe", "")
     ctx = {"root": str(root), "out": str(out / "run" / "out"), "python": sys.executable,
-           "exe": str(root / exe) if exe else (str(root / inp.name) if not inp.name.lower().endswith((".zip", ".tar.gz", ".tgz", ".tar")) else "")}
+           "exe": str(root / exe) if exe else (str(root / inp.name.split("__", 1)[-1]) if not inp.name.lower().endswith((".zip", ".tar.gz", ".tgz", ".tar")) else "")}
     Path(ctx["out"]).mkdir(parents=True, exist_ok=True)
     if os.name != "nt":
         xattr = shutil.which("xattr")

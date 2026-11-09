@@ -3,3 +3,6 @@ _ci_all/
 __pycache__/
 *.pyc
 versions/*/*/release_download/
+# 真机验收带回的交付件（= 输入包的副本）与解包目录不再进 git：输入包已在 inputs/，交付件由私有仓 pull 到 build/<软件>/verified/
+versions/*/*/verified/*/deliverable/
+versions/*/*/verified/*/run/pkg/

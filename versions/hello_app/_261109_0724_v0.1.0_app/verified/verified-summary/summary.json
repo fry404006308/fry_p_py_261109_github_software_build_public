@@ -1,0 +1,50 @@
+{
+ "schema_str": "fry-gh-summary/2",
+ "software_str": "HelloApp",
+ "version_str": "0.1.0",
+ "version_dir_str": "_261109_0724_v0.1.0_app",
+ "ok_bool": false,
+ "passed_int": 3,
+ "expected_int": 4,
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "present_bool": true,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "checks_int": 3,
+   "failed_list": [],
+   "seconds_float": 1.4
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "present_bool": true,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "checks_int": 3,
+   "failed_list": [],
+   "seconds_float": 3.1
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "present_bool": true,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "checks_int": 3,
+   "failed_list": [],
+   "seconds_float": 1.4
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": false,
+   "present_bool": true,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "checks_int": 3,
+   "failed_list": [
+    "selftest"
+   ],
+   "seconds_float": 0.1
+  }
+ ],
+ "summarized_at_str": "2026-11-09T15:31:09+0000"
+}
