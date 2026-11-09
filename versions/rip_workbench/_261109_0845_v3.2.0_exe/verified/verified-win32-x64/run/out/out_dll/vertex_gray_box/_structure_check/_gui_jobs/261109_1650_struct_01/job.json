@@ -1,0 +1,8 @@
+{
+ "kind_str": "flow",
+ "flow_str": "XJ100_dll_check_flow",
+ "input_data": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_dll\\vertex_gray_box",
+ "out_root_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_dll\\vertex_gray_box\\_structure_check",
+ "topic_str": "dll_structure_check",
+ "result_path_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_dll\\vertex_gray_box\\_structure_check\\_gui_jobs\\261109_1650_struct_01\\result.json"
+}

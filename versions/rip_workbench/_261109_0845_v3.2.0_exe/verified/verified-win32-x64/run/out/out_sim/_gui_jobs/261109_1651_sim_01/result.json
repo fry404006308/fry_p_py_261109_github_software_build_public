@@ -1,0 +1,137 @@
+{
+ "ok_bool": true,
+ "rc_int": 0,
+ "message_str": "第 1/1 个输入 Success: XB100_sim_flow ok",
+ "run_dir_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_sim\\_261109_1651_gui_sim",
+ "output_path_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_sim\\_261109_1651_gui_sim\\vertex_gray_box",
+ "reused_dir_bool": false,
+ "flow_status_str": "SUCCESS",
+ "step_status_dict": {
+  "HB100": "ok",
+  "EB100": "ok"
+ },
+ "key_output_dict": {
+  "name_str": "vertex_gray_box",
+  "_step_log_list": [
+   {
+    "step_id_str": "HB100",
+    "status_str": "ok",
+    "message_str": "Success: HB100_optics_sim ok",
+    "elapsed_ms_float": 2601.6211000000453,
+    "module_str": "HB100_optics_sim.HB100_optics_sim_facade",
+    "desc_str": "光学仿真：BMP 切片 → 真六视图 PNG（逐层 AD/KM + 材料预设 + Saunderson 界面；生效值随返回值回读）"
+   },
+   {
+    "step_id_str": "EB100",
+    "status_str": "ok",
+    "message_str": "Success: EB100_sim_glb ok",
+    "elapsed_ms_float": 2299.533399999973,
+    "module_str": "EB100_sim_glb.EB100_sim_glb_facade",
+    "desc_str": "重建：BMP 切片栈 → 带顶点色的仿真 GLB（MC / 泊松 / 体素立方 / Surface Nets 四法 + 可选纹理烘焙）"
+   }
+  ],
+  "_flow_t0_float": 259.4848241,
+  "sim_dir_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_sim\\_261109_1651_gui_sim\\vertex_gray_box\\sim",
+  "views_list": [
+   "view_back.png",
+   "view_bottom.png",
+   "view_front.png",
+   "view_left.png",
+   "view_right.png",
+   "view_top.png"
+  ],
+  "n_bmp_int": 431,
+  "effective_dict": {
+   "material_preset_str": "gt407",
+   "normal_geometry_mode_str": "occupancy",
+   "layer_engine_str": "ad",
+   "column_mode_str": "normal",
+   "km_ad_g_float": 0.0,
+   "saunderson_dict": {
+    "on": true,
+    "k1": 6.9e-06,
+    "k2": 0.001132
+   },
+   "view_orientation_dict": {
+    "mode": "auto",
+    "requested_up": "z+",
+    "requested_front": "y-",
+    "reference_to_voxel_matrix": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "axis_options_active": false
+   },
+   "window_mm_float": 1.2,
+   "window_src_str": "auto → slice_metadata.json 记的色带厚度",
+   "ink_saturation_um_dict": {
+    "c": 400.0,
+    "m": 500.0,
+    "y": 300.0,
+    "k": 300.0
+   },
+   "contract_src_str": "材料预设 gt407 自带（拟合时的合同，不是这次出片的）",
+   "preset_date_str": "2026-09-23",
+   "requires_bad_list": [],
+   "blend_mm_float": 0.08,
+   "ppm_float": 80.0,
+   "ks_scale_float": 1.0,
+   "show_support_bool": false,
+   "sim_engine_str": "dll（整条流程 C++，4 线程）",
+   "cpp_lib_str": "dll 1.1.1（交付，C:\\Users\\runneradmin\\AppData\\Local\\Temp\\_MEI53802\\rip_components\\fry_kernel\\_bin\\fry_sim\\win32-x64\\fry_sim.dll，指纹 4efa33dddddcd032）"
+  },
+  "glb_path_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_sim\\_261109_1651_gui_sim\\vertex_gray_box\\glb\\vertex_gray_box_marching_cubes.glb",
+  "glb_verts_int": 58666,
+  "glb_faces_int": 117328,
+  "glb_effective_dict": {
+   "method_str": "marching_cubes",
+   "texture_bool": false,
+   "color_engine_str": "km",
+   "color_domain_str": "ink",
+   "color_radius_mm_float": 0.16,
+   "color_pool_str": "footprint",
+   "depth_bins_int": 16,
+   "footprint_rays_int": 256,
+   "footprint_total_rays_int": 1552933,
+   "column_optics_str": "ray_color",
+   "km_layers_int": 192,
+   "layer_engine_str": "ad",
+   "material_preset_str": "gt407",
+   "preset_date_str": "2026-09-23",
+   "window_cap_src_str": "端口 band_capacity_mm（流程送来）",
+   "window_mm_float": 1.2,
+   "window_src_str": "ink_depth（上限=色带容量 1.200 mm，取色那一步算的）",
+   "ink_depth_mm_float": null,
+   "window_ruler_str": "n/a",
+   "ink_beyond_cap_int": null,
+   "oriented_bool": true,
+   "sim_engine_str": "dll（整条流程 C++，4 线程）"
+  }
+ },
+ "override_diff_list": [],
+ "batch_dict": {
+  "batch_id_str": "261109_165119_28af40",
+  "unit_index_int": 1,
+  "unit_total_int": 1,
+  "rel_path_str": "vertex_gray_box",
+  "unit_dir_str": "vertex_gray_box"
+ },
+ "kind_str": "flow",
+ "elapsed_s_float": 4.9,
+ "peak_mb_float": 246.3,
+ "python_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\pkg\\范仁义3D彩色打印RIP工作台_v3.2.0.exe",
+ "job_path_str": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_sim\\_gui_jobs\\261109_1651_sim_01\\job.json"
+}

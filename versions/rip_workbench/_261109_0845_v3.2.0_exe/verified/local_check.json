@@ -1,0 +1,27 @@
+{
+ "ok_bool": false,
+ "problems_list": [
+  "darwin-arm64 没有 verdict",
+  "darwin-x64 没有 verdict",
+  "linux-x64 没过：['gui_check', '真作业_HS200_dll加网', '真作业_HR200_仿真']",
+  "CI 汇总没过或没下载到"
+ ],
+ "rows_list": [
+  {
+   "target_str": "linux-x64",
+   "ok_bool": false,
+   "checks_int": 9,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {}
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "win32-x64__范仁义3D彩色打印RIP工作台_v3.2.0.exe": "897da303dc357671a3afb79bc842304fd7c42d4354f6faaf837c9895bc9fdafe"
+   }
+  }
+ ]
+}

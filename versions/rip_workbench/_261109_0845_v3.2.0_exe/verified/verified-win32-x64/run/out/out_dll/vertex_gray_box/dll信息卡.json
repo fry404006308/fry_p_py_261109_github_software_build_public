@@ -1,0 +1,112 @@
+{
+ "dll_path_str": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\_MEI62282\\fry_project_components\\HS200_halftone_dll\\_bin\\win32-x64\\fry_halftone.dll",
+ "dll_sha256_str": "0b04cba741bc44d631e890ade1cd50e3d2627cd4d5e3b957ed5d9511cb39cf68",
+ "identity_dict": {
+  "version_str": "0.0.0-dev",
+  "fingerprint_str": "aabd5ff0065d2d11d2bebfcc57d6cbf1599b627f9872c634744a17609961338d",
+  "engine_str": "cpp"
+ },
+ "sdk_info_dict": {
+  "package_str": "fry-halftone",
+  "version_str": "0.0.0-dev",
+  "platform_str": "win32-x64",
+  "algorithm_str": "water_transfer_depth",
+  "engine_str": "cpp",
+  "algorithm_fingerprint_str": "aabd5ff0065d2d11d2bebfcc57d6cbf1599b627f9872c634744a17609961338d",
+  "source_commit_str": "18cb9bf5021e7b8fc2d05a013062c2d28f1f7d0e",
+  "payload_file_count_int": 47,
+  "library_file_str": "bin/fry_halftone.dll",
+  "library_sha256_str": "0b04cba741bc44d631e890ade1cd50e3d2627cd4d5e3b957ed5d9511cb39cf68",
+  "import_library_file_str": "lib/fry_halftone.lib",
+  "import_library_sha256_str": "039331535457f4cd0fcc7f8824336b6932fdfbfb2194898ca49abb91c28937f5",
+  "header_file_str": "include/fry_halftone.h",
+  "params_schema_file_str": "params_schema.json",
+  "params_schema_id_str": "fry-halftone-params/3",
+  "params_schema_sha256_str": "f8e4d0048f1e91ad03a4a70bad93cbfde58ee6cb57485fd2b3d7beb088834c34",
+  "param_count_int": 18,
+  "params_doc_file_str": "SDK_参数说明.md",
+  "built_at_str": "2026-09-23T01:05:44-0700",
+  "built_on_str": "Windows AMD64",
+  "abi_str": "C ABI；Windows 调用约定 __stdcall，其它平台默认",
+  "header_language_str": "C89 兼容（纯 C / C++ / C# P-Invoke / Delphi 都能用）",
+  "cxx_standard_str": "C++17",
+  "compiler_str": "MSVC 19.50.35728.0",
+  "runtime_str": "MSVC C++ 运行库静态链接；UCRT 动态链接系统 ucrtbase.dll ⇒ **不需要装 VC++ Redistributable**",
+  "min_os_str": "Windows 10 x64 及以上",
+  "thread_safety_str": "同一时刻只跑一个作业（并发调用返回 6 BUSY）；Cancel 可从其它线程调；进度回调在调用线程上同步触发",
+  "memory_hint_str": "峰值随体素数线性增长；17 mm 半球件约 0.83 GB",
+  "network_bool": false,
+  "writes_registry_bool": false,
+  "entry_points_list": [
+   "FryHalftone_Cancel",
+   "FryHalftone_GetAlgorithmFingerprint",
+   "FryHalftone_GetAlgorithmName",
+   "FryHalftone_GetEngine",
+   "FryHalftone_GetParamSchemaJson",
+   "FryHalftone_GetVersion",
+   "FryHalftone_GetWorkerPathUtf8",
+   "FryHalftone_SetWorkerPathUtf8",
+   "FryHalftone_SliceModel",
+   "FryHalftone_SliceModelJsonUtf8",
+   "FryHalftone_SliceModelUtf8"
+  ],
+  "return_codes_dict": {
+   "0": "OK",
+   "1": "FAILED",
+   "2": "BAD_ARGUMENT",
+   "5": "CANCELLED",
+   "6": "BUSY",
+   "7": "UNSUPPORTED（模型写法暂不支持，原因写在 errorBuffer）"
+  },
+  "version_sources_list": [
+   "VERSION",
+   "sdk_info.json",
+   "FryHalftone_GetVersion()",
+   "Windows 文件属性（VERSIONINFO）"
+  ],
+  "delivery_manifest_file_str": "delivery_manifest.json",
+  "self_check_cmd_str": "python verify_delivery.py",
+  "file_properties_dict": {
+   "CompanyName": "fry_production",
+   "ProductName": "FryHalftone SDK",
+   "FileDescription": "水转印 3D 加网动态库 / water-transfer 3D halftone",
+   "FileVersion": "0.0.0-dev",
+   "ProductVersion": "0.0.0-dev",
+   "InternalName": "fry_halftone",
+   "OriginalFilename": "fry_halftone.dll",
+   "LegalCopyright": "Copyright (C) 2026 fry_production",
+   "Algorithm": "water_transfer_depth"
+  },
+  "delivered_at_str": "2026-09-23T01:06:11-0700",
+  "build_report_dict": {
+   "version_str": "0.0.0-dev",
+   "total_s_float": 29.5,
+   "smoke_dict": {
+    "export_surface_str": "ok_11",
+    "package_info_str": "ok_18",
+    "demo_slices_int": 109,
+    "delivery_items_int": 17,
+    "delivery_versions_dict": {
+     "VERSION 文件": "0.0.0-dev",
+     "sdk_info.json": "0.0.0-dev",
+     "dll 自报 GetVersion()": "0.0.0-dev",
+     "Windows 文件属性": "0.0.0-dev",
+     "包名": "fry-halftone-0.0.0-dev-win32-x64"
+    }
+   }
+  },
+  "source_now_fingerprint_str": "aabd5ff0065d2d11d2bebfcc57d6cbf1599b627f9872c634744a17609961338d",
+  "stale_bool": false
+ },
+ "delivery_dict": {
+  "ok_bool": true,
+  "checked_int": 6,
+  "missing_list": [],
+  "bad_sha_list": [],
+  "version_dict": {
+   "VERSION": "0.0.0-dev",
+   "sdk_info.json": "0.0.0-dev"
+  },
+  "note_str": ""
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "title": "范仁义3D彩色打印RIP工作台 v3.2.0",
+  "software": {
+    "name_str": "范仁义3D彩色打印RIP工作台",
+    "name_english_str": "FryRipStudio",
+    "version_str": "3.2.0",
+    "author_str": "范仁义",
+    "company_str": "FryCompanyGeneral",
+    "description_str": "3D 彩色打印 RIP: 加网出片 / 送印前体检 / 仿真 / 看片 / 评估 / 标定(靶 · 读数 · 反解 · TRC); RIP 全部在子进程里跑(rip_components/ZG100_run_job.py), 界面只做设置与看守"
+  },
+  "frozen": true,
+  "executable": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\pkg\\范仁义3D彩色打印RIP工作台_v3.2.0.exe",
+  "canvas": "FryCanvas",
+  "viewer": "NoneType",
+  "summary": null,
+  "icon_path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\_MEI21162\\icons\\3d-rip.ico",
+  "icon_sha256": "776df4df08d129951a653b13abedfc6953d3e17809bf4fd692ac83e5c6a43f83",
+  "features": [
+    {
+      "id": "HR100_halftone_print",
+      "label": "HR100 RIP 加网出片(GLB 文件夹 → BMP)"
+    },
+    {
+      "id": "HS300_join_bmp",
+      "label": "HS300 BMP拼合（EG100）"
+    },
+    {
+      "id": "HR500_preflight_qc",
+      "label": "HR500 RIP 送印前体检（墨水比例/层厚）"
+    },
+    {
+      "id": "HR200_simulate_bmp",
+      "label": "HR200 RIP 仿真(BMP 文件夹 → 六视图 + 仿真 GLB)"
+    },
+    {
+      "id": "HR400_view_bmp",
+      "label": "HR400 RIP 逆向看片(BMP → GLB / 点云 / 探针)"
+    },
+    {
+      "id": "HR300_evaluate_gt",
+      "label": "HR300 RIP 评估(GT 对比 ΔE)"
+    },
+    {
+      "id": "HR600_make_target",
+      "label": "HR600 RIP 标定靶(配方 → 靶 BMP)"
+    },
+    {
+      "id": "HR700_read_cgats",
+      "label": "HR700 RIP 读 CGATS 测量(→ 光谱 CSV)"
+    },
+    {
+      "id": "HR800_fit_material",
+      "label": "HR800 RIP 反解材料参数(α, σt)"
+    },
+    {
+      "id": "HR900_fit_trc",
+      "label": "HR900 RIP 拟合 TRC 曲线"
+    },
+    {
+      "id": "HS100_release_sdk",
+      "label": "HS100 打包水转印加网 SDK(dll / dylib / so)"
+    },
+    {
+      "id": "HS200_halftone_dll",
+      "label": "HS200 C++ 加网出片(dll, GLB 文件夹 → BMP)"
+    },
+    {
+      "id": "HS400_release_sim_sdk",
+      "label": "HS400 打包仿真 SDK(fry_sim.dll / dylib / so)"
+    },
+    {
+      "id": "HS500_github_verify",
+      "label": "HS500 GitHub多平台验收(Linux / macOS / Windows 真机)"
+    }
+  ],
+  "io_switch_check": {
+    "success": true,
+    "linked_switch": true,
+    "manual_preserved": true,
+    "relink": true
+  }
+}

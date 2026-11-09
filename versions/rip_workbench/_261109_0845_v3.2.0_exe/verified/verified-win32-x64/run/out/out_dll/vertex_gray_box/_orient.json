@@ -1,0 +1,37 @@
+{
+  "glb_to_voxel_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "glb_up": [
+    0,
+    1,
+    0
+  ],
+  "glb_front": [
+    0,
+    0,
+    1
+  ],
+  "voxel_mm": [
+    0.137,
+    0.035,
+    0.01
+  ],
+  "native_width_px": 131,
+  "output_width_px": 131,
+  "right_null_pad_px": 0
+}

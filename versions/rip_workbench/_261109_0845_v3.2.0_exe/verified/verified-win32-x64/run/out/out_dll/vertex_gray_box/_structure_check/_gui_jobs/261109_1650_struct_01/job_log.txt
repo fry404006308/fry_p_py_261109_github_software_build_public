@@ -1,0 +1,9 @@
+@@ZG100 {"event": "start", "kind": "flow", "job": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_dll\\vertex_gray_box\\_structure_check\\_gui_jobs\\261109_1650_struct_01\\job.json", "python": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\pkg\\范仁义3D彩色打印RIP工作台_v3.2.0.exe", "pid": 5960}
+[ZG100] 覆盖合计：与默认不同 0 项 ｜ 与默认相同 0 项（相同的不改变任何结果）
+[ZG100] 流程 XJ100_dll_check_flow ｜ 输入 "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x6... ｜ 输出 D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out\out_dll\vertex_gray_box\_structure_check\_261109_1650_dll_structure_check
+[XJ100_dll_check_flow] EH100    ok          1289.0 ms  Success: EH100_bmp_readback ok
+[XJ100_dll_check_flow] UF100    ok          5832.8 ms  Success: UF100_require_structure ok
+── 约束 · gate（1/1 项通过）
+   ✓ structure 实际 声明关闭                   要求 通过（或 ⚪ 声明关闭）  ← 这件上没有够大的「单色 + 柱长齐」平面区（找到 1 块候选，都被跳过了：逐柱落墨的标准差 11.622（> 1.40）：需求在这块区里不是常数（常数需求）—— 依据是上游 surf（取色产物，在加网之前），不是本约束自报｜★逐面族死因：+x ③往里削 1.30 mm 之后没有内接矩形（这一类颜色是散开的花纹，；+y ③往里削 1.30 mm 之后没有内接矩形（这一类颜色是散开的花纹，；+z ③往里削 1.30 mm 之后没有内接矩形（这一类颜色是散开的花纹，；-x ④内接矩形 37x55 太小（边 < 16 或面积 < 2500）；-y ③往里削 1.30 mm 之后没有内接矩形（这一类颜色是散开的花纹，；-z 墨std 11.622 > 1.40（这块区里需求不是常数）
+[XJ100_dll_check_flow] UD100    ok             4.8 ms  Success: UD100_constraint_gate ok
+@@ZG100 {"event": "end", "ok": true, "rc": 0, "result": "D:\\a\\fry_p_py_261109_github_software_build_public\\fry_p_py_261109_github_software_build_public\\_ci_out\\win32-x64\\run\\out\\out_dll\\vertex_gray_box\\_structure_check\\_gui_jobs\\261109_1650_struct_01\\result.json", "message": "Success: XJ100_dll_check_flow ok", "seconds": 7.2}

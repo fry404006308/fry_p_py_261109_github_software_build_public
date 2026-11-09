@@ -1,0 +1,5 @@
+2026-11-09 16:51:53,232 - INFO - 范仁义3D彩色打印RIP工作台 启动完成, 14 个功能, 配置文件 /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-x64/run/out/gui/settings.json
+2026-11-09 16:51:55,729 - INFO - Success: 已切换到功能 HS200 C++ 加网出片(dll, GLB 文件夹 → BMP)
+2026-11-09 16:51:56,350 - INFO - Success: 已切换到功能 HR200 RIP 仿真(BMP 文件夹 → 六视图 + 仿真 GLB)
+2026-11-09 16:51:57,939 - INFO - Success: 已切换到功能 HS200 C++ 加网出片(dll, GLB 文件夹 → BMP)
+2026-11-09 16:52:00,437 - INFO - 配置已保存: /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-x64/run/out/gui/settings.json

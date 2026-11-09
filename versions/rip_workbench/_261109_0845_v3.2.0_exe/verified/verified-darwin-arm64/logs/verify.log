@@ -1,0 +1,17 @@
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64/范仁义3D彩色打印RIP工作台.app/Contents/MacOS/范仁义3D彩色打印RIP工作台 --gui-check /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/gui
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+Matplotlib is building the font cache; this may take a moment.
+qt.qpa.fonts: Populating font family aliases took 87 ms. Replace uses of missing font family "Sans Serif" with one that exists to avoid this cost. 
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support grabbing the keyboard
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+
+[rc=0, 27.4 s]
