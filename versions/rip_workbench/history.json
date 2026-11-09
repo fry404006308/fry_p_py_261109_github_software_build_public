@@ -1,0 +1,19 @@
+{
+ "schema_str": "fry-gh-history/2",
+ "software_str": "rip_workbench",
+ "versions_list": [
+  {
+   "dir_str": "_261109_0836_v3.2.0_exe",
+   "version_str": "3.2.0",
+   "status_str": "staged",
+   "targets_list": [
+    "linux-x64",
+    "win32-x64"
+   ],
+   "inputs_sha256_dict": {
+    "win32-x64": "897da303dc357671a3afb79bc842304fd7c42d4354f6faaf837c9895bc9fdafe",
+    "linux-x64": "121efef92b7451ac4bc5947bea3b58dc347b763eb7f18d4238cc91d0d71b3448"
+   }
+  }
+ ]
+}

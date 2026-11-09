@@ -9,7 +9,8 @@ r"""fry_ci_target.py —— 在 GitHub 的一台目标机上，按版本目录 m
   input         inputs/ 下的压缩包（.zip / .tar.gz）——库的验收包、应用的便携包，或直接是一个 .exe
   kind          "kit"（库）｜ "app"（应用）—— 只用于报告，不改变执行逻辑
   steps         [{name, cmd:[...], cwd, timeout_s, expect_rc, expect_files:[glob], expect_out:[子串], env:{}}]
-                占位：{root} = 解包后的顶层目录，{out} = 本机输出目录，{exe} = 包里的主程序（由 exe 字段指出），{python} = CI 的 python
+                占位：{root} = 解包后的顶层目录，{out} = 本机输出目录，{exe} = 包里的主程序（由 exe 字段指出），{python} = CI 的 python，
+                {assets} = 版本目录下的 assets/（测试模型等数据）
   exe           主程序在包里的相对路径（应用用；单个 .exe 输入时自动 = 它）
   deliverables  验收通过后要带回的文件 glob（相对 {root} 或 {out}）；空 = 带回输入包本身
 只用 Python 标准库。退出码：0 通过 ｜ 1 没过 ｜ 2 输入有问题 / 平台不对。
@@ -198,6 +199,16 @@ def main(argv=None) -> int:
             checks.append({"key_str": "manifest 含本平台", "ok_bool": False, "detail_str": "manifest 没登记 %s" % ns.target})
         return finish(False, 2)
     inp = vdir / row["input"]
+    if not inp.is_file() and row.get("input_release_str"):        # 大文件（>90 MB）不在 git 里：从临时传输 release 下载
+        inp.parent.mkdir(parents=True, exist_ok=True)
+        for k in range(3):
+            r = subprocess.run(["gh", "release", "download", row["input_release_str"], "-p", inp.name, "-D", str(inp.parent), "--clobber"],
+                               capture_output=True, text=True, cwd=str(REPO))
+            if r.returncode == 0 and inp.is_file():
+                break
+            print("下载 %s 第 %d 次失败：%s" % (inp.name, k + 1, (r.stdout + r.stderr)[-300:]), flush=True)
+            time.sleep(10)
+        checks.append({"key_str": "大文件下载", "ok_bool": inp.is_file(), "detail_str": "%s ← release %s" % (inp.name, row["input_release_str"])})
     want = row.get("sha256_str", "")
     good = inp.is_file() and (not want or sha256_file(inp) == want)
     checks.append({"key_str": "输入闸 sha256", "ok_bool": good, "detail_str": row["input"] if good else "缺输入或 sha256 不符"})
@@ -205,7 +216,7 @@ def main(argv=None) -> int:
         return finish(False, 2)
     root = extract(inp, out / "run" / "pkg")
     exe = row.get("exe", "")
-    ctx = {"root": str(root), "out": str(out / "run" / "out"), "python": sys.executable,
+    ctx = {"root": str(root), "out": str(out / "run" / "out"), "python": sys.executable, "assets": str(vdir / "assets"),
            "exe": str(root / exe) if exe else (str(root / inp.name.split("__", 1)[-1]) if not inp.name.lower().endswith((".zip", ".tar.gz", ".tgz", ".tar")) else "")}
     Path(ctx["out"]).mkdir(parents=True, exist_ok=True)
     if os.name != "nt":
