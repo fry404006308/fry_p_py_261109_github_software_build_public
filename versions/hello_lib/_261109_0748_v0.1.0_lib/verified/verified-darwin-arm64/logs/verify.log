@@ -1,0 +1,8 @@
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/hello_lib-0.1.0-darwin-arm64/bin/hello-cli version
+
+[rc=-11, 0.0 s]
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/hello_lib-0.1.0-darwin-arm64/bin/hello-cli selftest /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/hello_lib-0.1.0-darwin-arm64/golden/golden.txt
+
+[rc=-11, 0.0 s]

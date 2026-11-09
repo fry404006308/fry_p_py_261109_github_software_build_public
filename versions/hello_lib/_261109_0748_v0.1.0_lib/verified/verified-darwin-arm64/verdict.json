@@ -1,0 +1,42 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "HelloLib",
+ "version_str": "0.1.0",
+ "version_dir_str": "_261109_0748_v0.1.0_lib",
+ "target_str": "darwin-arm64",
+ "host_target_str": "darwin-arm64",
+ "machine_dict": {
+  "platform_str": "macOS-15.8.2-arm64-arm-64bit",
+  "machine_str": "arm64",
+  "python_str": "3.11.9",
+  "image_str": "macos15 20261104.0514.1",
+  "macos_str": "15.8.2"
+ },
+ "started_at_str": "2026-11-09T15:54:17+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-arm64 ｜ 要验 darwin-arm64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/darwin-arm64__hello_lib-0.1.0-darwin-arm64.zip"
+  },
+  {
+   "key_str": "version",
+   "ok_bool": false,
+   "detail_str": "rc=-11（期望 0）；输出里没有「hello 0.1.0」"
+  },
+  {
+   "key_str": "golden",
+   "ok_bool": false,
+   "detail_str": "rc=-11（期望 0）；输出里没有「8 cases, 0 failed」"
+  }
+ ],
+ "ok_bool": false,
+ "seconds_float": 0.5,
+ "deliverable_dict": {}
+}

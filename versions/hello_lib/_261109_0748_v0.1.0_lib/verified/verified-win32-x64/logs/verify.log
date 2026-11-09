@@ -1,0 +1,10 @@
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\hello_lib-0.1.0-win32-x64/bin/hello-cli.exe version
+hello 0.1.0
+
+[rc=0, 0.0 s]
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\hello_lib-0.1.0-win32-x64/bin/hello-cli.exe selftest D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\hello_lib-0.1.0-win32-x64/golden/golden.txt
+selftest: 8 cases, 0 failed
+
+[rc=0, 0.0 s]
