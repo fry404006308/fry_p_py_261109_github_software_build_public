@@ -201,10 +201,13 @@ def main(argv=None) -> int:
     inp = vdir / row["input"]
     if not inp.is_file() and row.get("input_release_str"):        # 大文件（>90 MB）不在 git 里：从临时传输 release 下载
         inp.parent.mkdir(parents=True, exist_ok=True)
+        asset = row.get("input_asset_str") or inp.name           # 资产名是 ASCII 的（GitHub 会改写中文资产名），下载后改回 inputs/ 里的原名
         for k in range(3):
-            r = subprocess.run(["gh", "release", "download", row["input_release_str"], "-p", inp.name, "-D", str(inp.parent), "--clobber"],
+            r = subprocess.run(["gh", "release", "download", row["input_release_str"], "-p", asset, "-D", str(inp.parent), "--clobber"],
                                capture_output=True, text=True, cwd=str(REPO))
-            if r.returncode == 0 and inp.is_file():
+            if r.returncode == 0 and (inp.parent / asset).is_file():
+                if asset != inp.name:
+                    os.replace(inp.parent / asset, inp)
                 break
             print("下载 %s 第 %d 次失败：%s" % (inp.name, k + 1, (r.stdout + r.stderr)[-300:]), flush=True)
             time.sleep(10)
