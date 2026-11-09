@@ -85,7 +85,7 @@
   {
    "dir_str": "_261109_0934_v3.2.0_exe",
    "version_str": "3.2.0",
-   "status_str": "staged",
+   "status_str": "verified",
    "targets_list": [
     "darwin-arm64",
     "darwin-x64",
@@ -97,6 +97,13 @@
     "linux-x64": "08e3e943504df2e3ba3cac2f5f43d1f7ca5764e1633e9e4569fbc296d0cffdd5",
     "darwin-arm64": "718596626c010f323a708f4e2782011bffc100aedfd773e4f26e7ba8940e3c2b",
     "darwin-x64": "3de5f75406cbb60eb33f785194ae2540f7e40668679f37910f651a3b33e0b487"
+   },
+   "verified_at_str": "2026-11-09T09:51:55-0800",
+   "platforms_dict": {
+    "darwin-arm64": true,
+    "darwin-x64": true,
+    "linux-x64": true,
+    "win32-x64": true
    }
   }
  ]

@@ -1,0 +1,64 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "范仁义3D彩色打印RIP工作台",
+ "version_str": "3.2.0",
+ "version_dir_str": "_261109_0934_v3.2.0_exe",
+ "target_str": "darwin-x64",
+ "host_target_str": "darwin-x64",
+ "machine_dict": {
+  "platform_str": "macOS-15.7.9-x86_64-i386-64bit",
+  "machine_str": "x86_64",
+  "python_str": "3.11.9",
+  "image_str": "macos15 20260824.0482.1",
+  "macos_str": "15.7.9"
+ },
+ "started_at_str": "2026-11-09T17:43:03+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-x64 ｜ 要验 darwin-x64"
+  },
+  {
+   "key_str": "大文件下载",
+   "ok_bool": true,
+   "detail_str": "darwin-x64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-x64.zip ← release transport-rip_workbench-261109_0934_v3.2.0_exe"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/darwin-x64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-x64.zip"
+  },
+  {
+   "key_str": "gui_check",
+   "ok_bool": true,
+   "detail_str": "rc=0 68.5 s"
+  },
+  {
+   "key_str": "作业单_HS200",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.6 s"
+  },
+  {
+   "key_str": "真作业_HS200_dll加网",
+   "ok_bool": true,
+   "detail_str": "rc=0 67.0 s"
+  },
+  {
+   "key_str": "作业单_HR200",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.1 s"
+  },
+  {
+   "key_str": "真作业_HR200_仿真",
+   "ok_bool": true,
+   "detail_str": "rc=0 31.4 s"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 250.9,
+ "deliverable_dict": {
+  "darwin-x64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-x64.zip": "3de5f75406cbb60eb33f785194ae2540f7e40668679f37910f651a3b33e0b487"
+ }
+}

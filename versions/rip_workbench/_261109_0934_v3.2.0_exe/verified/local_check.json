@@ -1,0 +1,42 @@
+{
+ "ok_bool": true,
+ "problems_list": [],
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "darwin-arm64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-arm64.zip": "718596626c010f323a708f4e2782011bffc100aedfd773e4f26e7ba8940e3c2b"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {
+    "darwin-x64__范仁义3D彩色打印RIP工作台_v3.2.0_darwin-x64.zip": "3de5f75406cbb60eb33f785194ae2540f7e40668679f37910f651a3b33e0b487"
+   }
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 9,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "linux-x64__范仁义3D彩色打印RIP工作台_v3.2.0": "08e3e943504df2e3ba3cac2f5f43d1f7ca5764e1633e9e4569fbc296d0cffdd5"
+   }
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "win32-x64__范仁义3D彩色打印RIP工作台_v3.2.0.exe": "dfe72a53b895be8d14130bb720b3dba14a64348ae9e4a3b731e5b76c81085055"
+   }
+  }
+ ]
+}
