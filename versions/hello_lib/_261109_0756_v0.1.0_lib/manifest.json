@@ -1,0 +1,165 @@
+{
+ "schema_str": "fry-gh-version/2",
+ "software_str": "HelloLib",
+ "slug_str": "hello_lib",
+ "version_str": "0.1.0",
+ "dir_str": "_261109_0756_v0.1.0_lib",
+ "created_at_str": "2026-11-09T07:56:48-0800",
+ "targets": {
+  "darwin-arm64": {
+   "input": "inputs/darwin-arm64__hello_lib-0.1.0-darwin-arm64.zip",
+   "sha256_str": "4309c6d959c68f4e0e78ddfd25ee29ddace6ec9f910020e94004f23f6f2e2ae5",
+   "size_int": 4707,
+   "kind": "kit",
+   "exe": "",
+   "steps": [
+    {
+     "name": "version",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "version"
+     ],
+     "expect_out": [
+      "hello 0.1.0"
+     ]
+    },
+    {
+     "name": "golden",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "selftest",
+      "{root}/golden/golden.txt"
+     ],
+     "expect_out": [
+      "8 cases, 0 failed"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "darwin-x64": {
+   "input": "inputs/darwin-x64__hello_lib-0.1.0-darwin-x64.zip",
+   "sha256_str": "5bba3c2c8dd90f64aceab3e5cc123e5a146558c35ecc48a71d1f57b4b9d8cf46",
+   "size_int": 3851,
+   "kind": "kit",
+   "exe": "",
+   "steps": [
+    {
+     "name": "version",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "version"
+     ],
+     "expect_out": [
+      "hello 0.1.0"
+     ]
+    },
+    {
+     "name": "golden",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "selftest",
+      "{root}/golden/golden.txt"
+     ],
+     "expect_out": [
+      "8 cases, 0 failed"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "linux-arm64": {
+   "input": "inputs/linux-arm64__hello_lib-0.1.0-linux-arm64.zip",
+   "sha256_str": "2402a9d3f895c33ad9c1890902d6b4a346e66e0df051b342ad1719079d53cfd1",
+   "size_int": 4164,
+   "kind": "kit",
+   "exe": "",
+   "steps": [
+    {
+     "name": "version",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "version"
+     ],
+     "expect_out": [
+      "hello 0.1.0"
+     ]
+    },
+    {
+     "name": "golden",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "selftest",
+      "{root}/golden/golden.txt"
+     ],
+     "expect_out": [
+      "8 cases, 0 failed"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "linux-x64": {
+   "input": "inputs/linux-x64__hello_lib-0.1.0-linux-x64.zip",
+   "sha256_str": "80da645c7094baeec6f48cc122b387f50d699218db575e037f9410bc2b9c5967",
+   "size_int": 4121,
+   "kind": "kit",
+   "exe": "",
+   "steps": [
+    {
+     "name": "version",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "version"
+     ],
+     "expect_out": [
+      "hello 0.1.0"
+     ]
+    },
+    {
+     "name": "golden",
+     "cmd": [
+      "{root}/bin/hello-cli",
+      "selftest",
+      "{root}/golden/golden.txt"
+     ],
+     "expect_out": [
+      "8 cases, 0 failed"
+     ]
+    }
+   ],
+   "deliverables": []
+  },
+  "win32-x64": {
+   "input": "inputs/win32-x64__hello_lib-0.1.0-win32-x64.zip",
+   "sha256_str": "2073a7e2783452dfdb2603c2df02d9366f3f0e331931ce0c3cb9a4e780e78c13",
+   "size_int": 145309,
+   "kind": "kit",
+   "exe": "",
+   "steps": [
+    {
+     "name": "version",
+     "cmd": [
+      "{root}/bin/hello-cli.exe",
+      "version"
+     ],
+     "expect_out": [
+      "hello 0.1.0"
+     ]
+    },
+    {
+     "name": "golden",
+     "cmd": [
+      "{root}/bin/hello-cli.exe",
+      "selftest",
+      "{root}/golden/golden.txt"
+     ],
+     "expect_out": [
+      "8 cases, 0 failed"
+     ]
+    }
+   ],
+   "deliverables": []
+  }
+ }
+}

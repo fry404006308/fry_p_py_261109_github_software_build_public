@@ -104,6 +104,23 @@ def fill(x: str, ctx: Dict[str, str]) -> str:
     return x
 
 
+def diag(exe: str, log: Path) -> None:
+    """一步没过且主程序是个文件：把「它依赖谁、怎么找依赖」记进日志（macOS otool / Linux ldd），远程排错只能靠这些。"""
+    cmds = []
+    if platform.system() == "Darwin":
+        cmds = [["otool", "-L", exe], ["otool", "-l", exe], ["codesign", "-dv", exe]]
+        cmds += [["otool", "-L", str(p)] for p in Path(exe).parent.glob("*.dylib")]
+    elif platform.system() == "Linux":
+        cmds = [["ldd", exe], ["file", exe]]
+    with open(log, "a", encoding="utf-8", errors="replace") as f:
+        for c in cmds:
+            try:
+                r = subprocess.run(c, capture_output=True, text=True, timeout=60)
+                f.write("\n[诊断] $ %s\n%s%s" % (" ".join(c), r.stdout[-6000:], r.stderr[-2000:]))
+            except (OSError, subprocess.TimeoutExpired) as exc:
+                f.write("\n[诊断] $ %s → %r\n" % (" ".join(c), exc))
+
+
 def run_step(step: Dict[str, Any], ctx: Dict[str, str], log: Path) -> Dict[str, Any]:
     cmd = [fill(str(c), ctx) for c in step["cmd"]]
     cwd = fill(step.get("cwd", "{root}"), ctx)
@@ -122,6 +139,8 @@ def run_step(step: Dict[str, Any], ctx: Dict[str, str], log: Path) -> Dict[str, 
     with open(log, "a", encoding="utf-8", errors="replace") as f:
         f.write("\n$ %s\n%s\n[rc=%d, %.1f s]\n" % (" ".join(cmd), out, rc, time.time() - t0))
     print(out[-4000:], flush=True)
+    if rc != step.get("expect_rc", 0) and cmd and os.path.isfile(cmd[0]):
+        diag(cmd[0], log)
     problems = []
     if rc != step.get("expect_rc", 0):
         problems.append("rc=%d（期望 %d）" % (rc, step.get("expect_rc", 0)))

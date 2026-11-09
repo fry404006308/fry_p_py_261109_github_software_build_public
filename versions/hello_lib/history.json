@@ -28,6 +28,25 @@
     "linux-x64": true,
     "win32-x64": true
    }
+  },
+  {
+   "dir_str": "_261109_0756_v0.1.0_lib",
+   "version_str": "0.1.0",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64",
+    "linux-arm64",
+    "linux-x64",
+    "win32-x64"
+   ],
+   "inputs_sha256_dict": {
+    "darwin-arm64": "4309c6d959c68f4e0e78ddfd25ee29ddace6ec9f910020e94004f23f6f2e2ae5",
+    "darwin-x64": "5bba3c2c8dd90f64aceab3e5cc123e5a146558c35ecc48a71d1f57b4b9d8cf46",
+    "linux-arm64": "2402a9d3f895c33ad9c1890902d6b4a346e66e0df051b342ad1719079d53cfd1",
+    "linux-x64": "80da645c7094baeec6f48cc122b387f50d699218db575e037f9410bc2b9c5967",
+    "win32-x64": "2073a7e2783452dfdb2603c2df02d9366f3f0e331931ce0c3cb9a4e780e78c13"
+   }
   }
  ]
 }
