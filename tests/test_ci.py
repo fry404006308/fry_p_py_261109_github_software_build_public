@@ -72,8 +72,11 @@ def test_summary_needs_every_platform():
 
 def test_no_source_in_repo():
     """本仓自己也不许混进软件源码：除 ci/ 与 tests/ 以外不应有 .py / .c / .h（压缩包里的由私有仓推送前核对）。"""
-    bad = [p for p in REPO.rglob("*") if p.is_file() and p.suffix in (".py", ".c", ".cc", ".cpp", ".h", ".hpp")
-           and p.relative_to(REPO).parts[0] not in ("ci", "tests", ".git")]
+    import subprocess
+    r = subprocess.run(["git", "ls-files", "-z"], cwd=str(REPO), capture_output=True)   # 只看进了 git 的（本地被忽略的运行目录不算仓库内容）
+    files = [x for x in r.stdout.decode("utf-8", "replace").split("\0") if x] if r.returncode == 0 else \
+        [p.relative_to(REPO).as_posix() for p in REPO.rglob("*") if p.is_file() and ".git" not in p.parts]
+    bad = [f for f in files if f.rsplit(".", 1)[-1] in ("py", "c", "cc", "cpp", "h", "hpp") and f.split("/")[0] not in ("ci", "tests")]
     assert bad == []
 
 
