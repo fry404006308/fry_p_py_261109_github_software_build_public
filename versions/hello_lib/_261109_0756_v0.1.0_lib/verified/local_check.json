@@ -1,0 +1,51 @@
+{
+ "ok_bool": true,
+ "problems_list": [],
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 4,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "darwin-arm64__hello_lib-0.1.0-darwin-arm64.zip": "4309c6d959c68f4e0e78ddfd25ee29ddace6ec9f910020e94004f23f6f2e2ae5"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "checks_int": 4,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {
+    "darwin-x64__hello_lib-0.1.0-darwin-x64.zip": "5bba3c2c8dd90f64aceab3e5cc123e5a146558c35ecc48a71d1f57b4b9d8cf46"
+   }
+  },
+  {
+   "target_str": "linux-arm64",
+   "ok_bool": true,
+   "checks_int": 4,
+   "machine_str": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+   "deliverable_dict": {
+    "linux-arm64__hello_lib-0.1.0-linux-arm64.zip": "2402a9d3f895c33ad9c1890902d6b4a346e66e0df051b342ad1719079d53cfd1"
+   }
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 4,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "linux-x64__hello_lib-0.1.0-linux-x64.zip": "80da645c7094baeec6f48cc122b387f50d699218db575e037f9410bc2b9c5967"
+   }
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 4,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "win32-x64__hello_lib-0.1.0-win32-x64.zip": "2073a7e2783452dfdb2603c2df02d9366f3f0e331931ce0c3cb9a4e780e78c13"
+   }
+  }
+ ]
+}
