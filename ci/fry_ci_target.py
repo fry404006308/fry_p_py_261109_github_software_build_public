@@ -127,8 +127,11 @@ def run_step(step: Dict[str, Any], ctx: Dict[str, str], log: Path) -> Dict[str, 
     cwd = fill(step.get("cwd", "{root}"), ctx)
     env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     env.update({k: fill(str(v), ctx) for k, v in (step.get("env") or {}).items()})
-    if os.name != "nt" and cmd and os.path.isfile(cmd[0]):
-        os.chmod(cmd[0], os.stat(cmd[0]).st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+    if os.name != "nt" and cmd and os.path.isfile(cmd[0]) and not os.access(cmd[0], os.X_OK):
+        try:                                              # 只给「本来不可执行」的补 +x（macOS 上动系统 Python 会 PermissionError）
+            os.chmod(cmd[0], os.stat(cmd[0]).st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+        except OSError:
+            pass
     t0 = time.time()
     try:
         p = subprocess.run(cmd, cwd=cwd, capture_output=True, timeout=step.get("timeout_s", 1200), env=env)
@@ -227,7 +230,10 @@ def main(argv=None) -> int:
         if xattr:                                         # 下载隔离属性会让 Gatekeeper 拦 dylib / 可执行文件
             subprocess.run([xattr, "-dr", "com.apple.quarantine", str(root)], capture_output=True)
     for step in row.get("steps", []):
-        checks.append(run_step(step, ctx, out / "logs" / "verify.log"))
+        try:                                              # 验收脚本自己出错也要落成一条失败检查，verdict.json 必须写出来
+            checks.append(run_step(step, ctx, out / "logs" / "verify.log"))
+        except Exception as exc:                          # noqa: BLE001
+            checks.append({"key_str": step.get("name", "?"), "ok_bool": False, "detail_str": "验收脚本异常：%r" % exc})
     ok = all(c["ok_bool"] for c in checks) and bool(row.get("steps"))
     if not row.get("steps"):
         checks.append({"key_str": "验收单", "ok_bool": False, "detail_str": "steps 为空 = 什么都没验"})

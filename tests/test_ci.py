@@ -88,3 +88,13 @@ def test_single_exe_input_keeps_original_name(tmp_path):
     rc, v = run(vdir, tmp_path)
     assert rc == 0 and v["ok_bool"]
     assert not (tmp_path / "out" / "run" / "pkg").exists() and (tmp_path / "out" / "run" / "out" / "r.txt").is_file()
+
+
+def test_step_exception_still_writes_verdict(tmp_path, monkeypatch):
+    """某一步让验收脚本自己抛异常（如 macOS 上 chmod 系统 Python 被拒），也必须写出 verdict 并判红，不能整个崩掉。"""
+    vdir = make_version(tmp_path, [{"name": "boom", "cmd": PY_READ}])
+    def boom(*a, **k):
+        raise PermissionError("Operation not permitted")
+    monkeypatch.setattr(fry_ci_target, "run_step", boom)
+    rc, v = run(vdir, tmp_path)
+    assert rc == 1 and not v["ok_bool"] and "验收脚本异常" in v["checks_list"][-1]["detail_str"]
