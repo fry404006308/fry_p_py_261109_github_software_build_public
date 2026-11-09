@@ -1,0 +1,42 @@
+{
+ "ok_bool": true,
+ "problems_list": [],
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 3,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "darwin-arm64__HelloApp_v0.1.0_darwin-arm64.zip": "02372d71794a16428a34d8dd7696ce07a0e9bfa1b2bf53d7db6be49687504b4d"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "checks_int": 3,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {
+    "darwin-x64__HelloApp_v0.1.0_darwin-x64.zip": "c4d9d14e13b21e588207d2ce9aa5533218515bea10ebcfe54b3d4fe3ab01e113"
+   }
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 3,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "linux-x64__HelloApp_v0.1.0_linux-x64.tar.gz": "a731bf52b4559017a5edc367911b27a62a32f323af21fb45587805851e2ec4d7"
+   }
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 3,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "win32-x64__HelloApp_v0.1.0.exe": "797e8aefe14a28b2e56d8f304a7372c92d66ec8a4c331e50b1a03d7b9ab08eb2"
+   }
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+
+$ /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/pkg/HelloApp_v0.1.0_darwin-arm64/HelloApp.app/Contents/MacOS/HelloApp --selftest /Users/runner/work/fry_p_py_261109_github_software_build_public/fry_p_py_261109_github_software_build_public/_ci_out/darwin-arm64/run/out/out
+
+[rc=0, 0.1 s]

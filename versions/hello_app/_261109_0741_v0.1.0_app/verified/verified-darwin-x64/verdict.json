@@ -1,0 +1,39 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "HelloApp",
+ "version_str": "0.1.0",
+ "version_dir_str": "_261109_0741_v0.1.0_app",
+ "target_str": "darwin-x64",
+ "host_target_str": "darwin-x64",
+ "machine_dict": {
+  "platform_str": "macOS-15.7.9-x86_64-i386-64bit",
+  "machine_str": "x86_64",
+  "python_str": "3.11.9",
+  "image_str": "macos15 20260824.0482.1",
+  "macos_str": "15.7.9"
+ },
+ "started_at_str": "2026-11-09T15:42:23+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-x64 ｜ 要验 darwin-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/darwin-x64__HelloApp_v0.1.0_darwin-x64.zip"
+  },
+  {
+   "key_str": "selftest",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.3 s"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 4.8,
+ "deliverable_dict": {
+  "darwin-x64__HelloApp_v0.1.0_darwin-x64.zip": "c4d9d14e13b21e588207d2ce9aa5533218515bea10ebcfe54b3d4fe3ab01e113"
+ }
+}

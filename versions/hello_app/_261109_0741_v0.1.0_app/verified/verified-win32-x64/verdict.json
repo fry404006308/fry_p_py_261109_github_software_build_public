@@ -1,0 +1,38 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "HelloApp",
+ "version_str": "0.1.0",
+ "version_dir_str": "_261109_0741_v0.1.0_app",
+ "target_str": "win32-x64",
+ "host_target_str": "win32-x64",
+ "machine_dict": {
+  "platform_str": "Windows-10-10.0.20348-SP0",
+  "machine_str": "AMD64",
+  "python_str": "3.11.9",
+  "image_str": "win22 20261101.353.1"
+ },
+ "started_at_str": "2026-11-09T15:42:18+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 win32-x64 ｜ 要验 win32-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/win32-x64__HelloApp_v0.1.0.exe"
+  },
+  {
+   "key_str": "selftest",
+   "ok_bool": true,
+   "detail_str": "rc=0 1.0 s"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 1.0,
+ "deliverable_dict": {
+  "win32-x64__HelloApp_v0.1.0.exe": "797e8aefe14a28b2e56d8f304a7372c92d66ec8a4c331e50b1a03d7b9ab08eb2"
+ }
+}
