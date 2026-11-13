@@ -22,7 +22,7 @@
   {
    "dir_str": "_261113_0506_v2.20.0_exe",
    "version_str": "2.20.0",
-   "status_str": "staged",
+   "status_str": "failed",
    "targets_list": [
     "darwin-arm64",
     "darwin-x64",
@@ -34,6 +34,13 @@
     "linux-x64": "e4d80bc0a4df18919d89fa5796a4e36c23a0d7e4868234d215e1247b4dd52314",
     "darwin-arm64": "094b68730c4203f6321391ec322a4612186cb8c93da5772d2ed2e3f01a70cf5d",
     "darwin-x64": "81188e79d46ff0fe60168209616798ad8b9f4ef4858a2ba4d2d359377aab50a8"
+   },
+   "verified_at_str": "2026-11-13T06:14:59-0800",
+   "platforms_dict": {
+    "darwin-arm64": false,
+    "darwin-x64": false,
+    "linux-x64": false,
+    "win32-x64": false
    }
   }
  ]
