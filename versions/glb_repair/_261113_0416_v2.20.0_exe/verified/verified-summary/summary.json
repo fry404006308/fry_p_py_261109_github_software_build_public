@@ -1,0 +1,56 @@
+{
+ "schema_str": "fry-gh-summary/2",
+ "software_str": "GLB修复软件",
+ "version_str": "2.20.0",
+ "version_dir_str": "_261113_0416_v2.20.0_exe",
+ "ok_bool": false,
+ "passed_int": 0,
+ "expected_int": 4,
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": false,
+   "present_bool": true,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "checks_int": 4,
+   "failed_list": [
+    "selftest"
+   ],
+   "seconds_float": 154.6
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": false,
+   "present_bool": true,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "checks_int": 4,
+   "failed_list": [
+    "selftest"
+   ],
+   "seconds_float": 318.6
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": false,
+   "present_bool": true,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "checks_int": 5,
+   "failed_list": [
+    "selftest"
+   ],
+   "seconds_float": 144.6
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": false,
+   "present_bool": true,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "checks_int": 4,
+   "failed_list": [
+    "selftest"
+   ],
+   "seconds_float": 162.2
+  }
+ ],
+ "summarized_at_str": "2026-11-13T12:26:58+0000"
+}
