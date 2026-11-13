@@ -1,0 +1,51 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "GLB修复软件",
+ "version_str": "2.20.0",
+ "version_dir_str": "_261113_0826_v2.20.0_exe",
+ "target_str": "win32-x64",
+ "host_target_str": "win32-x64",
+ "machine_dict": {
+  "platform_str": "Windows-10-10.0.20348-SP0",
+  "machine_str": "AMD64",
+  "python_str": "3.11.9",
+  "image_str": "win22 20261112.366.7"
+ },
+ "started_at_str": "2026-11-13T16:31:09+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 win32-x64 ｜ 要验 win32-x64"
+  },
+  {
+   "key_str": "大文件下载",
+   "ok_bool": true,
+   "detail_str": "win32-x64__GLB修复软件_v2.20.0.exe ← release transport-glb_repair-261113_0826_v2.20.0_exe"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/win32-x64__GLB修复软件_v2.20.0.exe"
+  },
+  {
+   "key_str": "装 Blender 5.2.2 + 3D Print Toolbox（Windows 另放 Mesa 软件 OpenGL）",
+   "ok_bool": false,
+   "detail_str": "rc=1（期望 0）；输出里没有「ci-prepare-ok」"
+  },
+  {
+   "key_str": "selftest",
+   "ok_bool": false,
+   "detail_str": "rc=6（期望 0）"
+  },
+  {
+   "key_str": "自检报告摘要（只打印，不判）",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.0 s"
+  }
+ ],
+ "ok_bool": false,
+ "seconds_float": 181.5,
+ "deliverable_dict": {}
+}
