@@ -18,6 +18,23 @@
     "darwin-arm64": "90bf462013c4d632dfc1d975344ec186f4194430266b227d350bb7ad0b69e7bd",
     "darwin-x64": "87f4a926a41845be17808415e1efe265be7bb3b0489c93dce64b9494ca252ff4"
    }
+  },
+  {
+   "dir_str": "_261113_0506_v2.20.0_exe",
+   "version_str": "2.20.0",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64",
+    "linux-x64",
+    "win32-x64"
+   ],
+   "inputs_sha256_dict": {
+    "win32-x64": "75a48dcf7122411fe95148c9552f217e5dec720ca3c82c05dd2b3293bd9e2637",
+    "linux-x64": "e4d80bc0a4df18919d89fa5796a4e36c23a0d7e4868234d215e1247b4dd52314",
+    "darwin-arm64": "094b68730c4203f6321391ec322a4612186cb8c93da5772d2ed2e3f01a70cf5d",
+    "darwin-x64": "81188e79d46ff0fe60168209616798ad8b9f4ef4858a2ba4d2d359377aab50a8"
+   }
   }
  ]
 }
