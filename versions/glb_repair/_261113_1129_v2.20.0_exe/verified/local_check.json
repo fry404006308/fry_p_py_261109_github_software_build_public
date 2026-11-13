@@ -1,0 +1,42 @@
+{
+ "ok_bool": true,
+ "problems_list": [],
+ "rows_list": [
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "darwin-arm64__GLB修复软件_v2.20.0_darwin-arm64.zip": "286cfbdc53127f62c89a12eae8a83882498cb5674e1f36c393049f1054242771"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {
+    "darwin-x64__GLB修复软件_v2.20.0_darwin-x64.zip": "bbccec17bd4ad259ef7536b5d80dc26cb28082d6fea9e5d87262b50c7d6b743d"
+   }
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 7,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "linux-x64__GLB修复软件_v2.20.0_linux-x64.tar.gz": "1258b19456f959fe02a5f7d0252cef87e39f56c61d4ecd8a735a038679f2ee02"
+   }
+  },
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 7,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "win32-x64__GLB修复软件_v2.20.0.exe": "793e9f01af35f5938f872475aba82aa4eb5a7d253ee44f2430564e416499aab4"
+   }
+  }
+ ]
+}
