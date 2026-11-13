@@ -1,0 +1,54 @@
+{
+ "schema_str": "fry-gh-verdict/2",
+ "software_str": "GLB修复软件",
+ "version_str": "2.20.0",
+ "version_dir_str": "_261113_1031_v2.20.0_exe",
+ "target_str": "darwin-arm64",
+ "host_target_str": "darwin-arm64",
+ "machine_dict": {
+  "platform_str": "macOS-15.8.2-arm64-arm-64bit",
+  "machine_str": "arm64",
+  "python_str": "3.11.9",
+  "image_str": "macos15 20261104.0514.1",
+  "macos_str": "15.8.2"
+ },
+ "started_at_str": "2026-11-13T18:35:27+0000",
+ "fingerprint_str": "",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-arm64 ｜ 要验 darwin-arm64"
+  },
+  {
+   "key_str": "大文件下载",
+   "ok_bool": true,
+   "detail_str": "darwin-arm64__GLB修复软件_v2.20.0_darwin-arm64.zip ← release transport-glb_repair-261113_1031_v2.20.0_exe"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "inputs/darwin-arm64__GLB修复软件_v2.20.0_darwin-arm64.zip"
+  },
+  {
+   "key_str": "装 Blender 5.2.2 + 3D Print Toolbox（Windows 另放 Mesa 软件 OpenGL）",
+   "ok_bool": true,
+   "detail_str": "rc=0 23.1 s"
+  },
+  {
+   "key_str": "selftest",
+   "ok_bool": true,
+   "detail_str": "rc=0 580.1 s"
+  },
+  {
+   "key_str": "自检报告摘要（只打印，不判）",
+   "ok_bool": true,
+   "detail_str": "rc=0 0.2 s"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 631.0,
+ "deliverable_dict": {
+  "darwin-arm64__GLB修复软件_v2.20.0_darwin-arm64.zip": "3dfadfab935b399665ba945f96be20e3f95fa3b43bfb937375fe24c37b827a8f"
+ }
+}
