@@ -1,0 +1,39 @@
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\范仁义3D彩色打印RIP工作台_v3.2.2.exe --gui-check D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/gui
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+
+[rc=0, 24.3 s]
+
+$ C:\hostedtoolcache\windows\Python\3.11.9\x64\python.exe -c import json,sys;json.dump(dict(feature=sys.argv[1],input=sys.argv[2],output=sys.argv[3],run=True,params=json.loads(sys.argv[5])),open(sys.argv[4],'w',encoding='utf-8')) HS200_halftone_dll D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\versions\rip_workbench\_261120_1953_v3.2.2_workbench\assets/in D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/out_dll D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/job_dll.json {"size_mm_float": 3.0, "orient_mode_str": "original", "sdk_check_str": "strict"}
+
+[rc=0, 0.0 s]
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\范仁义3D彩色打印RIP工作台_v3.2.2.exe --gui-check D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/gui_dll D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/job_dll.json
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+
+[rc=0, 20.6 s]
+
+$ C:\hostedtoolcache\windows\Python\3.11.9\x64\python.exe -c import json,sys;json.dump(dict(feature=sys.argv[1],input=sys.argv[2],output=sys.argv[3],run=True,params=json.loads(sys.argv[5])),open(sys.argv[4],'w',encoding='utf-8')) HR200_simulate_bmp D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/out_dll D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/out_sim D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/job_sim.json {"sim_ppm_float": 20.0, "sim_engine_str": "dll"}
+
+[rc=0, 0.0 s]
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\范仁义3D彩色打印RIP工作台_v3.2.2.exe --gui-check D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/gui_sim D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/job_sim.json
+[信息] : 创建新的历史管理器: __no_image__
+[信息] : 历史记录保存：【FryCanvas】初始创建状态管理器
+
+[rc=0, 22.9 s]
+
+$ D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\pkg\范仁义3D彩色打印RIP工作台_v3.2.2.exe --cli HR100_halftone_print D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\versions\rip_workbench\_261120_1953_v3.2.2_workbench\assets/in D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out/out_python --param target_mm_float=3.0 --param orient_mode_str=original --param halftone_method_str=water_transfer_depth
+[ok] BATCH:original_scene_node.glb Success: 加网 water_transfer_depth ｜ 第 1/1 个模型 original_scene_node：加网 1 个算法：water_transfer_depth(成功; 六视图 关; 仿真GLB 关) ｜ rc=0 ｜ 实验根 _261121_0400_gui_print
+[ok] TA100 Success: 结果图 1451x269 (grid, 字号 14, 像素密度 x1.00)
+[disabled] EA100 步骤被关闭, 跳过
+Success: 完成: 成功 1 / 排除 0 (共 1 项)
+
+[rc=0, 13.1 s]
+
+$ C:\hostedtoolcache\windows\Python\3.11.9\x64\python.exe D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\versions\rip_workbench\_261120_1953_v3.2.2_workbench\assets/verify_products.py D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\_ci_out\win32-x64\run\out D:\a\fry_p_py_261109_github_software_build_public\fry_p_py_261109_github_software_build_public\versions\rip_workbench\_261120_1953_v3.2.2_workbench\assets/../manifest.json
+RIP_ACCEPTANCE {"version": "3.2.2", "features": 14, "python": {"slices": 309, "md5": "a1933e99be27da3f2c2f36a7cd35341e", "engine": "python"}, "cpp": {"slices": 309, "md5": "a1933e99be27da3f2c2f36a7cd35341e", "engine": "cpp"}, "simulation": {"views": {"front": [48, 25], "back": [48, 25], "left": [62, 25], "right": [62, 25], "top": [48, 62], "bottom": [48, 62]}, "vertices": 14664, "engines": ["dll\uff08\u6574\u6761\u6d41\u7a0b C++\uff0c4 \u7ebf\u7a0b\uff09", "dll\uff08\u6574\u6761\u6d41\u7a0b C++\uff0c4 \u7ebf\u7a0b\uff09"]}}
+
+[rc=0, 0.1 s]
