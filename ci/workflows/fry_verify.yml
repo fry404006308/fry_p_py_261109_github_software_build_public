@@ -62,7 +62,9 @@ jobs:
         if: always()
         with:
           name: verified-${{ matrix.target }}
-          path: _ci_out/${{ matrix.target }}
+          path: |
+            _ci_out/${{ matrix.target }}
+            !_ci_out/${{ matrix.target }}/run/pkg/**
           if-no-files-found: error
           retention-days: 30
 

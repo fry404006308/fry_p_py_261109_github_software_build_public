@@ -105,6 +105,23 @@
     "linux-x64": true,
     "win32-x64": true
    }
+  },
+  {
+   "dir_str": "_261120_1953_v3.2.2_workbench",
+   "version_str": "3.2.2",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64",
+    "linux-x64",
+    "win32-x64"
+   ],
+   "inputs_sha256_dict": {
+    "darwin-arm64": "90b2fc31fda0af8f20d65c8a837d43b3b33c2edd2a666bbcd91d3de353b4dedc",
+    "linux-x64": "7433fdb64724ca37d72453ac08dc6b65c2521982b5aada02a615b56f6f735e73",
+    "darwin-x64": "87f0e922781ce1757adc438e9714be122c4559d989090982531fcb5caf042121",
+    "win32-x64": "2d297862b8bc06af35dd8591a79b32c9f0611b1eba2c3f1bb48d219b32f7ced8"
+   }
   }
  ]
 }
