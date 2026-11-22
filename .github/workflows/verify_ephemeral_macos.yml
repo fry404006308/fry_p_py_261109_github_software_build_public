@@ -1,0 +1,61 @@
+name: Binary-only macOS verification
+run-name: Ephemeral macOS - ${{ inputs.version_dir }}
+on:
+  workflow_dispatch:
+    inputs:
+      version_dir:
+        description: Verified GLB app manifest under versions
+        required: true
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: darwin-arm64
+            host: macos-15
+          - target: darwin-x64
+            host: macos-15-intel
+    runs-on: ${{ matrix.host }}
+    timeout-minutes: 75
+    env:
+      TARGET: ${{ matrix.target }}
+      VDIR: ${{ inputs.version_dir }}
+      QT_QPA_PLATFORM: offscreen
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Create an ephemeral recipient (public half only leaves this job)
+        run: |
+          python -m pip install --disable-pip-version-check cryptography==46.0.3
+          python ci/ephemeral_transfer.py key "$RUNNER_TEMP/fsb-runner.key" "$RUNNER_TEMP/recipient.pem"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: recipient-${{ matrix.target }}
+          path: ${{ runner.temp }}/recipient.pem
+          retention-days: 1
+      - name: Receive and verify the exact package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python ci/receive_ephemeral.py "$VDIR" "$TARGET"
+      - name: Run the product with no repository credential
+        run: python ci/fry_ci_target.py --version-dir "versions/$VDIR" --target "$TARGET" --out "_ci_out/$TARGET"
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: evidence-${{ matrix.target }}
+          path: |
+            _ci_out/*/verdict.json
+            _ci_out/*/run/out/selftest/selftest_report.json
+            _ci_out/*/run/out/selftest/gui.png
+            _ci_out/*/logs/*.log
+          if-no-files-found: warn
+          retention-days: 7
