@@ -199,6 +199,19 @@
     "linux-x64": true,
     "win32-x64": true
    }
+  },
+  {
+   "dir_str": "_261122_0205_v2.21.0_ci_7c0e3f",
+   "version_str": "2.21.0",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64"
+   ],
+   "inputs_sha256_dict": {
+    "darwin-arm64": "8667a1a6b1b38daed9b8755711d65f3cb4fbfafedf726046459e837d1c76e81b",
+    "darwin-x64": "cd2135bf0ad26cca518822185de37cc60ead6f5b807c83d6141add80870d69de"
+   }
   }
  ]
 }
