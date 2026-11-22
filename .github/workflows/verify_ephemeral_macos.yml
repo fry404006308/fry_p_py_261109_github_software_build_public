@@ -6,6 +6,14 @@ on:
       version_dir:
         description: Verified GLB app manifest under versions
         required: true
+      subset:
+        type: choice
+        options: [both, intel, apple]
+        default: both
+      intel_lts:
+        type: boolean
+        description: Also test current Intel-compatible Blender 4.5 LTS
+        default: false
 permissions:
   contents: read
 jobs:
@@ -14,11 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - target: darwin-arm64
-            host: macos-15
-          - target: darwin-x64
-            host: macos-15-intel
+        include: ${{ fromJSON(inputs.subset == 'intel' && '[{"target":"darwin-x64","host":"macos-15-intel"}]' || inputs.subset == 'apple' && '[{"target":"darwin-arm64","host":"macos-15"}]' || '[{"target":"darwin-arm64","host":"macos-15"},{"target":"darwin-x64","host":"macos-15-intel"}]') }}
     runs-on: ${{ matrix.host }}
     timeout-minutes: 75
     env:
@@ -47,7 +51,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python ci/receive_ephemeral.py "$VDIR" "$TARGET"
       - name: Run the product with no repository credential
+        if: ${{ !inputs.intel_lts || matrix.target != 'darwin-x64' }}
         run: python ci/fry_ci_target.py --version-dir "versions/$VDIR" --target "$TARGET" --out "_ci_out/$TARGET"
+      - name: Compatibility run with Intel-native Blender LTS and the real plugin
+        if: ${{ inputs.intel_lts && matrix.target == 'darwin-x64' }}
+        run: |
+          python ci/install_intel_blender_lts.py "versions/$VDIR/assets/print3d_toolbox.zip"
+          python ci/fry_ci_target.py --version-dir "versions/$VDIR" --target "$TARGET" --out "_ci_out/$TARGET"
       - uses: actions/upload-artifact@v6
         if: always()
         with:
