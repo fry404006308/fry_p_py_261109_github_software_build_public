@@ -1,0 +1,85 @@
+{
+ "schema_str": "fry-gh-version/2",
+ "software_str": "GLB修复软件",
+ "slug_str": "glb_repair",
+ "version_str": "2.21.0",
+ "dir_str": "_261122_0223_v2.21.0_ci_14f7f7",
+ "created_at_str": "2026-11-22T02:23:58-0800",
+ "targets": {
+  "darwin-x64": {
+   "input": "inputs/darwin-x64__GLB修复软件_v2.21.0_darwin-x64.zip",
+   "sha256_str": "724440071f7efa08c5683fb348d6968806e1e1c6dcbb50eef6f91666db926870",
+   "size_int": 554129297,
+   "kind": "app",
+   "exe": "GLB修复软件.app/Contents/MacOS/GLB修复软件",
+   "steps": [
+    {
+     "name": "装 Blender 5.2.2 + 3D Print Toolbox（Windows 另放 Mesa 软件 OpenGL）",
+     "cmd": [
+      "{python}",
+      "{assets}/ci_prepare.py",
+      "{exe}",
+      "{assets}",
+      "5.2.2"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 2400,
+     "expect_rc": 0,
+     "expect_out": [
+      "ci-prepare-ok"
+     ]
+    },
+    {
+     "name": "selftest",
+     "cmd": [
+      "{exe}",
+      "--selftest",
+      "{out}/selftest"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 3600,
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/selftest/selftest_report.json"
+     ],
+     "env": {
+      "FRY_SELFTEST_ALLOW_NO_BLENDER": "1"
+     }
+    },
+    {
+     "name": "自检报告摘要（只打印，不判）",
+     "cmd": [
+      "{python}",
+      "-c",
+      "import json,sys,pathlib;p=pathlib.Path(sys.argv[1]);d=json.loads(p.read_text(encoding='utf-8')) if p.is_file() else None;print('自检报告不存在' if d is None else '自检：%d 项必需失败 / 共 %d 项' % (d['n_fail_int'], d['n_check_int']));[print('  ✗', r.get('name_str'), (r.get('error_str') or '')[:300], '\\n', (r.get('traceback_str') or '')[-1500:]) for r in (d or {}).get('result_list', []) if not r.get('ok_bool')];logs=sorted(p.parent.glob('gui_logs/**/*.log'));[print('== gui 日志', f.name, '\\n', ''.join(l for l in f.read_text(encoding='utf-8',errors='replace').splitlines(True) if any(k in l for k in ('viewer','3D','Error','error','VTK','vtk','OpenGL','Traceback','Exception')))[-3000:]) for f in logs[-3:]]",
+      "{out}/selftest/selftest_report.json"
+     ],
+     "cwd": "{out}",
+     "timeout_s": 60,
+     "expect_rc": 0
+    },
+    {
+     "name": "本版业务验证：版本、外部 Blender、运行库和金标准",
+     "cmd": [
+      "{python}",
+      "-c",
+      "import json,sys;d=json.load(open(sys.argv[1],encoding='utf8'));r={v['name_str']:v for v in d['result_list']};assert d['n_fail_int']==0 and r['optical_probe']['detail']['version']==sys.argv[2] and r['optical_probe']['detail']['executed'] and r['imports']['detail']['n_lib_int']>=25;print('ready')",
+      "{out}/selftest/selftest_report.json",
+      "2.21.0"
+     ],
+     "expect_rc": 0,
+     "expect_out": [
+      "ready"
+     ],
+     "timeout_s": 60,
+     "cwd": "{out}"
+    }
+   ],
+   "deliverables": [
+    "{out}/selftest/selftest_report.json"
+   ],
+   "input_release_str": "transport-glb_repair-261122_0223_v2.21.0_ci_14f7f7",
+   "input_asset_str": "darwin-x64__724440071f7efa08.zip"
+  }
+ }
+}

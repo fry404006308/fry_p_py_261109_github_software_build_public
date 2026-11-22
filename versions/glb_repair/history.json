@@ -225,6 +225,17 @@
     "darwin-arm64": "cbcbae207205440a097b794faa15be3e45721eddcc7cc5219268f61d2faf39be",
     "darwin-x64": "724440071f7efa08c5683fb348d6968806e1e1c6dcbb50eef6f91666db926870"
    }
+  },
+  {
+   "dir_str": "_261122_0223_v2.21.0_ci_14f7f7",
+   "version_str": "2.21.0",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-x64"
+   ],
+   "inputs_sha256_dict": {
+    "darwin-x64": "724440071f7efa08c5683fb348d6968806e1e1c6dcbb50eef6f91666db926870"
+   }
   }
  ]
 }
