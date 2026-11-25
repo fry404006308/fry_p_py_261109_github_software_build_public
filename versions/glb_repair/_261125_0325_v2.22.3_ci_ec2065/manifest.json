@@ -1,0 +1,78 @@
+{
+ "schema_str": "fry-gh-version/2",
+ "software_str": "GLB修复软件",
+ "slug_str": "glb_repair",
+ "version_str": "2.22.3",
+ "dir_str": "_261125_0325_v2.22.3_ci_ec2065",
+ "created_at_str": "2026-11-25T03:25:51-0800",
+ "targets": {
+  "darwin-arm64": {
+   "input": "inputs/darwin-arm64__GLB修复软件_v2.22.3_darwin-arm64.zip",
+   "sha256_str": "0857f8ed8d0d5dd893d30d440483b9ee8b288d822e252b6d2569dcc9966cef94",
+   "size_int": 554726904,
+   "kind": "app",
+   "exe": "GLB修复软件.app/Contents/MacOS/GLB修复软件",
+   "steps": [
+    {
+     "name": "实际构建 Cocoa 窗口、加载3D模型、保存截图",
+     "cmd": [
+      "{exe}",
+      "-c",
+      "from pathlib import Path;import sys,json,selftest;d=Path(sys.argv[1]);p=d/'preview'/'shape.ply';p.parent.mkdir(parents=True,exist_ok=True);p.write_text('ply\\nformat ascii 1.0\\nelement vertex 4\\nproperty float x\\nproperty float y\\nproperty float z\\nelement face 4\\nproperty list uchar int vertex_indices\\nend_header\\n0 0 0\\n1 0 0\\n0 1 0\\n0 0 1\\n3 0 2 1\\n3 0 1 3\\n3 0 3 2\\n3 1 2 3\\n'.replace(chr(10),chr(10)));r=selftest.check_gui(d);(d/'selftest_report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf8');assert r['ok_bool'] and r['detail']['preview_loaded_bool'] and sys.argv[2] in r['detail']['window_title_str']",
+      "{out}/selftest",
+      "2.22.3"
+     ],
+     "env": {
+      "QT_QPA_PLATFORM": "cocoa"
+     },
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/selftest/gui.png",
+      "{out}/selftest/selftest_report.json"
+     ],
+     "timeout_s": 240,
+     "cwd": "{out}"
+    }
+   ],
+   "deliverables": [
+    "{out}/selftest/selftest_report.json"
+   ],
+   "input_release_str": "transport-glb_repair-261125_0325_v2.22.3_ci_ec2065",
+   "input_asset_str": "darwin-arm64__0857f8ed8d0d5dd8.zip"
+  },
+  "darwin-x64": {
+   "input": "inputs/darwin-x64__GLB修复软件_v2.22.3_darwin-x64.zip",
+   "sha256_str": "f34a73e01ac9b628e14ae28def4de875e6a4b9657f4641aaa0a7e8d30856417a",
+   "size_int": 555893611,
+   "kind": "app",
+   "exe": "GLB修复软件.app/Contents/MacOS/GLB修复软件",
+   "steps": [
+    {
+     "name": "实际构建 Cocoa 窗口、加载3D模型、保存截图",
+     "cmd": [
+      "{exe}",
+      "-c",
+      "from pathlib import Path;import sys,json,selftest;d=Path(sys.argv[1]);p=d/'preview'/'shape.ply';p.parent.mkdir(parents=True,exist_ok=True);p.write_text('ply\\nformat ascii 1.0\\nelement vertex 4\\nproperty float x\\nproperty float y\\nproperty float z\\nelement face 4\\nproperty list uchar int vertex_indices\\nend_header\\n0 0 0\\n1 0 0\\n0 1 0\\n0 0 1\\n3 0 2 1\\n3 0 1 3\\n3 0 3 2\\n3 1 2 3\\n'.replace(chr(10),chr(10)));r=selftest.check_gui(d);(d/'selftest_report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf8');assert r['ok_bool'] and r['detail']['preview_loaded_bool'] and sys.argv[2] in r['detail']['window_title_str']",
+      "{out}/selftest",
+      "2.22.3"
+     ],
+     "env": {
+      "QT_QPA_PLATFORM": "cocoa"
+     },
+     "expect_rc": 0,
+     "expect_files": [
+      "{out}/selftest/gui.png",
+      "{out}/selftest/selftest_report.json"
+     ],
+     "timeout_s": 240,
+     "cwd": "{out}"
+    }
+   ],
+   "deliverables": [
+    "{out}/selftest/selftest_report.json"
+   ],
+   "input_release_str": "transport-glb_repair-261125_0325_v2.22.3_ci_ec2065",
+   "input_asset_str": "darwin-x64__f34a73e01ac9b628.zip"
+  }
+ }
+}

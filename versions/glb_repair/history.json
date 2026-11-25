@@ -273,6 +273,19 @@
    "inputs_sha256_dict": {
     "darwin-x64": "f34a73e01ac9b628e14ae28def4de875e6a4b9657f4641aaa0a7e8d30856417a"
    }
+  },
+  {
+   "dir_str": "_261125_0325_v2.22.3_ci_ec2065",
+   "version_str": "2.22.3",
+   "status_str": "staged",
+   "targets_list": [
+    "darwin-arm64",
+    "darwin-x64"
+   ],
+   "inputs_sha256_dict": {
+    "darwin-arm64": "0857f8ed8d0d5dd893d30d440483b9ee8b288d822e252b6d2569dcc9966cef94",
+    "darwin-x64": "f34a73e01ac9b628e14ae28def4de875e6a4b9657f4641aaa0a7e8d30856417a"
+   }
   }
  ]
 }
